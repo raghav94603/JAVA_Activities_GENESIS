@@ -4,6 +4,7 @@ import java.lang.*;
 abstract class shape
 {
 	abstract void calculateArea(int value);
+	
 }
 
 class circle extends shape
@@ -21,7 +22,7 @@ class square extends shape
 	void calculateArea(int value)
 	{
 		System.out.println("The area of rectangle is : ");
-		System.out.print(value*value);
+		System.out.print((float)value*value);
 		
 	}
 }
