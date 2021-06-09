@@ -14,15 +14,15 @@ class TeamNotFoundException extends Exception {
 }
 public class exception4 
 {
-private static String win1;
-private static String run1; 
+private static String winner;
+private static String runner; 
 static void validate() throws TeamNotFoundException
 { 
  Scanner sc = new Scanner(System.in);
  System.out.println("Enter the expected winner team of IPL Season 13");
- win1 = sc.nextLine();
+ winner = sc.nextLine();
  System.out.println("Enter the expected runner Team of IPL Season 13");
- run1 = sc.nextLine();
+ runner = sc.nextLine();
  Set<String> names = new HashSet<String>();
  names.add("Chennai Super Kings");
  names.add("Sun Risers Hyderabad");
@@ -36,8 +36,8 @@ static void validate() throws TeamNotFoundException
  
  
 
- if (names.contains(win1) && names.contains(run1))   
-	 System.out.println("Expected winner team of IPL Season 13:"+" "+win1+" "+"\nExpected runner team of IPL Season 13:"+" "+run1);
+ if (names.contains(winner) && names.contains(runner))   
+	 System.out.println("Expected winner team of IPL Season 13:"+" "+winner+" "+"\nExpected runner team of IPL Season 13:"+" "+runner);
  else 
 	 throw new TeamNotFoundException("Entered team is not a part of IPL season 13"); 
 }
