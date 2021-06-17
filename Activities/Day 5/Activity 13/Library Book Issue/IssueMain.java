@@ -10,18 +10,20 @@ public class IssueMain {
 		Scanner s = new Scanner(System.in);
 		LocalDate date = LocalDate.now();
 		
-		System.out.println("Book Type:");
+		System.out.println("Book Name :");
 		String bookName = s.nextLine();
 		
-		System.out.println("Enter user type");
+		System.out.println("Enter user type : ");
 		String userType = s.nextLine();
 		
 		Issue i = new Issue(bookName, userType);
 		
-		if(userType.equalsIgnoreCase("student")) {
+		if(userType.equalsIgnoreCase("student"))
+		{
 			LocalDate studate = date.plusDays(15);
-			System.out.println(studate);
+			System.out.println("Your Return Date Will be : "+" "+studate);
 		}
+		
 		else if(userType.equalsIgnoreCase("faculty")) {
 			LocalDate facdate = date.plusDays(90);
 			System.out.println(facdate);
